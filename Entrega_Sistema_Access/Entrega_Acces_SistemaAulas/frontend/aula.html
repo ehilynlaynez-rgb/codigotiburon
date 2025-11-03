@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Aula · Detalle</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html">← Volver</a>
+    <h1 id="title">Aula</h1>
+  </header>
+  <main class="grid">
+    <section class="card">
+      <h2>Recursos</h2>
+      <div id="recursos"></div>
+      <div class="row">
+        <input id="tipo" placeholder="Tipo (Ej: Escritorio)">
+        <input id="codigo" placeholder="Código">
+        <button onclick="addRecurso()">Agregar</button>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Reservas</h2>
+      <div class="row">
+        <input id="inicio" type="datetime-local">
+        <input id="fin" type="datetime-local">
+        <button onclick="reservar()">Reservar</button>
+        <button class="secondary" onclick="liberar()">Liberar</button>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Reportar daño</h2>
+      <div class="row">
+        <input id="recursoId" placeholder="Id recurso (opcional)">
+        <input id="desc" placeholder="Descripción del daño">
+        <input id="foto" type="file" accept="image/*">
+        <button onclick="reportar()">Reportar</button>
+      </div>
+      <div id="reportes"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script> initAula(); </script>
+</body>
+</html>

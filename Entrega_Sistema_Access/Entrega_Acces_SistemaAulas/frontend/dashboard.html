@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard · Sistema de Aulas</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Dashboard · Estado en vivo</h1>
+    <div><span id="who"></span> · <a href="index.html">Salir</a></div>
+  </header>
+  <main class="grid">
+    <section class="card">
+      <h2>Aulas</h2>
+      <div id="aulas"></div>
+    </section>
+    <section class="card">
+      <h2>Histórico</h2>
+      <pre id="hist"></pre>
+    </section>
+  </main>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    initDashboard();
+  </script>
+</body>
+</html>
